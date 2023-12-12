@@ -1,32 +1,11 @@
 <script>
 import axios from 'axios';
-import foco from '../assets/icon/foco.svg';
-import recarga from '../assets/icon/recarga.svg';
-import calendar from '../assets/icon/calendar.svg';
 
 export default{
     data(){
         return{
             balance:null,
             url:'http://bun-burn-env.eba-ftyx2m3h.us-east-1.elasticbeanstalk.com',
-            list:[
-                {
-                    img:recarga,
-                    text:"Recargas",
-                    route: "/recargas"
-                },
-                {
-                    img:foco,
-                    text:"Pago de servicios",
-                     route: "/"
-                },
-                {
-                    img:calendar,
-                    text:"Historial de ganancias",
-                     route: "/"
-                },
-            ]    
-            
         }
     },
 
@@ -66,14 +45,26 @@ export default{
         <hr class="my-6">
         
         <div>
-            <router-link  v-for="(item, index) in list" :key="index"  :to="item.route" custom v-slot="{ navigate }">
+            <router-link  to="/recargas" custom v-slot="{ navigate }">
                 <div role="link" @click="navigate" class="flex flex-row items-center  mb-4 rounded-md bg-slate-100 p-4 cursor-pointer">
                     <div class="card-items rounded-md p-2 mr-3">
-                        <img :src="item.img">
+                        <img src="../assets/icon/recarga.svg">
                     </div>
-                    <p class="font-medium mr-2 text-xl">{{item.text}}</p>
+                    <p class="font-medium mr-2 text-xl">Recargas</p>
                 </div> 
             </router-link>
+            <div class="flex flex-row items-center  mb-4 rounded-md bg-slate-100 p-4 cursor-pointer">
+                <div class="card-items rounded-md p-2 mr-3">
+                    <img src="../assets/icon/foco.svg">
+                </div>
+                <p class="font-medium mr-2 text-xl">Pago de servicios</p>
+            </div> 
+            <div class="flex flex-row items-center  mb-4 rounded-md bg-slate-100 p-4 cursor-pointer">
+                <div class="card-items rounded-md p-2 mr-3">
+                    <img src="../assets/icon/calendar.svg">
+                </div>
+                <p class="font-medium mr-2 text-xl">Historial de ganacias </p>
+            </div> 
         </div>
 
     </div>
