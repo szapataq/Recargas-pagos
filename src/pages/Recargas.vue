@@ -13,7 +13,6 @@ export default{
 
       axios.get(this.url +'/getProviders', { 'headers': { 'Authorization': 'Bearer ' + localStorage.getItem('token') } })
         .then((response => {
-// console.log(response.data.data.companies)
         this.providers = [...response.data?.data?.companies]
         }))
         .catch((error) => {
@@ -29,7 +28,7 @@ export default{
           <label for="search-busines" class="text-slate-600 mr-2 font-medium">Buscar empresa</label>
           <div class="relative">
               <input type="search" id="search-busines" class="block w-full p-4 text-mg text-gray-900 rounded-md bg-slate-100" placeholder="ej. Culqi" required>
-              <button type="submit" class="absolute end-2.5 bottom-2.5 px-2 py-2"><img class="icon" src="../assets/icon/search.png"></button>
+              <button type="submit" class="absolute end-2.5 bottom-2.5 px-2 py-2"><img src="../assets/icon/search.svg"></button>
           </div>
       </form>
       <div class="mt-4 flex gap-2">
@@ -52,20 +51,12 @@ export default{
             <img class="icon-company mr-4" :src="item.image">
             <p>{{item.company}}</p>
           </div>
-          <img class="icon mr-1" src="../assets/icon/favorite.png">
+          <img class="mr-1" src="../assets/icon/favorite.svg">
         </div>
       </div>
     </div>
 </template>
 <style scoped>
-    .icon-btn {
-        width: 20px;
-        height: 20px; 
-    }
-    .icon {
-        width: 15px;
-        height: 15px; 
-    }
     .icon-company{
       width: 30px
     }

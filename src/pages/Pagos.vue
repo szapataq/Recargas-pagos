@@ -5,8 +5,24 @@ export default{
     data(){
         return{
             balance:null,
-            url:'http://bun-burn-env.eba-ftyx2m3h.us-east-1.elasticbeanstalk.com'
-
+            url:'http://bun-burn-env.eba-ftyx2m3h.us-east-1.elasticbeanstalk.com',
+            list:[
+                {
+                    img:"src/assets/icon/recarga.svg",
+                    text:"Recargas",
+                    route: "/recargas"
+                },
+                {
+                    img:"src/assets/icon/foco.svg",
+                    text:"Pago de servicios",
+                     route: "/"
+                },
+                {
+                    img:"src/assets/icon/calendar.svg",
+                    text:"Historial de ganancias",
+                     route: "/"
+                },
+            ]    
             
         }
     },
@@ -27,7 +43,7 @@ export default{
 
 <template>
     <div class="px-4 py-5">
-        <div>
+
             <div class="flex flex-row items-center  mb-2">
                     <p class="text-slate-500 mr-2 font-medium">Saldo virtual</p>
                     <img src="../assets/icon/info.svg">
@@ -43,30 +59,18 @@ export default{
                     <p>¿Cómo cargar mi saldo vitual?</p>
             </button>
             <p class="text-slate-500 mr-2 font-medium mb-6">Código para cargar tu saldo: <span class="code">{123456789}</span></p>
-        </div>
+      
         <hr class="my-6">
         
         <div>
-            <router-link to="/recargas" custom v-slot="{ navigate }">
+            <router-link  v-for="(item, index) in list" :key="index"  :to="item.route" custom v-slot="{ navigate }">
                 <div role="link" @click="navigate" class="flex flex-row items-center  mb-4 rounded-md bg-slate-100 p-4 cursor-pointer">
                     <div class="card-items rounded-md p-2 mr-3">
-                        <img src="../assets/icon/recarga.svg">
+                        <img :src="item.img">
                     </div>
-                    <p class="font-medium mr-2 text-xl">Recargas</p>
+                    <p class="font-medium mr-2 text-xl">{{item.text}}</p>
                 </div> 
             </router-link>
-            <div class="flex flex-row items-center  mb-4 rounded-md bg-slate-100 p-4 cursor-pointer">
-                <div class="card-items rounded-md p-2 mr-3">
-                    <img src="../assets/icon/foco.svg">
-                </div>
-                <p class="font-medium mr-2 text-xl">Pago de servicios</p>
-            </div> 
-            <div class="flex flex-row items-center  mb-4 rounded-md bg-slate-100 p-4 cursor-pointer">
-                <div class="card-items rounded-md p-2 mr-3">
-                    <img src="../assets/icon/calendar.svg">
-                </div>
-                <p class="font-medium mr-2 text-xl">Historial de ganacias </p>
-            </div> 
         </div>
 
     </div>
