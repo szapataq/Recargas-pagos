@@ -5,7 +5,18 @@ export default{
     data(){
         return{
             providers:[],
-            url:'http://bun-burn-env.eba-ftyx2m3h.us-east-1.elasticbeanstalk.com'
+            url:'http://bun-burn-env.eba-ftyx2m3h.us-east-1.elasticbeanstalk.com',
+            tabs:[
+              {
+                name:'favoritas'
+              },
+              {
+                name:'favoritas'
+              },
+              {
+                name:'Telefonía'
+              }
+            ]
         }
     },
 
@@ -32,17 +43,9 @@ export default{
           </div>
       </form>
       <div class="mt-4 flex gap-2">
-        <button class="flex flex-row items-center border border-slate-300 rounded-2xl px-3 py-1 mb-4">
+        <button v-for="(items,index) in tabs" :key="index" class="flex flex-row items-center border border-slate-300 rounded-2xl px-3 py-1 mb-4">
           <img class=" mr-1" src="../assets/icon/like.svg">
-          <p>Todas</p>
-        </button>
-        <button class="flex flex-row items-center border border-slate-300 rounded-2xl px-3 py-1 mb-4">
-          <img class=" mr-1" src="../assets/icon/like.svg">
-          <p>Favoritas</p>
-        </button> 
-        <button class="flex flex-row items-center border border-slate-300 rounded-2xl px-3 py-1 mb-4">
-          <img class=" mr-1" src="../assets/icon/like.svg">
-          <p>Telefonía</p>
+          <p>{{items.name}}</p>
         </button>
       </div>
       <div>

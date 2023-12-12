@@ -1,5 +1,8 @@
 <script>
 import axios from 'axios';
+import foco from '../assets/icon/foco.svg';
+import recarga from '../assets/icon/recarga.svg';
+import calendar from '../assets/icon/calendar.svg';
 
 export default{
     data(){
@@ -8,17 +11,17 @@ export default{
             url:'http://bun-burn-env.eba-ftyx2m3h.us-east-1.elasticbeanstalk.com',
             list:[
                 {
-                    img:"src/assets/icon/recarga.svg",
+                    img:recarga,
                     text:"Recargas",
                     route: "/recargas"
                 },
                 {
-                    img:"src/assets/icon/foco.svg",
+                    img:foco,
                     text:"Pago de servicios",
                      route: "/"
                 },
                 {
-                    img:"src/assets/icon/calendar.svg",
+                    img:calendar,
                     text:"Historial de ganancias",
                      route: "/"
                 },
