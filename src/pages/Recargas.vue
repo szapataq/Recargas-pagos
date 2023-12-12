@@ -34,15 +34,15 @@ export default{
       </form>
       <div class="mt-4 flex gap-2">
         <button class="flex flex-row items-center border border-slate-300 rounded-2xl px-3 py-1 mb-4">
-          <img class="icon mr-1" src="../assets/icon/like.png">
+          <img class=" mr-1" src="../assets/icon/like.svg">
           <p>Todas</p>
         </button>
         <button class="flex flex-row items-center border border-slate-300 rounded-2xl px-3 py-1 mb-4">
-          <img class="icon mr-1" src="../assets/icon/like.png">
+          <img class=" mr-1" src="../assets/icon/like.svg">
           <p>Favoritas</p>
         </button> 
         <button class="flex flex-row items-center border border-slate-300 rounded-2xl px-3 py-1 mb-4">
-          <img class="icon mr-1" src="../assets/icon/like.png">
+          <img class=" mr-1" src="../assets/icon/like.svg">
           <p>Telefonía</p>
         </button>
       </div>
