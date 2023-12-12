@@ -47,7 +47,7 @@ export default{
         </button>
       </div>
       <div>
-        <div class="flex items-center justify-between p-4 border-b" v-for="item in providers">
+        <div class="flex items-center justify-between p-4 border-b" v-for="item in providers" :key="item._id">
           <div class="flex items-center">
             <img class="icon-company mr-4" :src="item.image">
             <p>{{item.company}}</p>
