@@ -32,29 +32,28 @@ export default{
           </div>
       </form>
       <div class="mt-4 flex gap-2">
-        <button class="flex flex-row items-center border border-slate-300 rounded-2xl px-3 py-1 mb-4">
-          <img class=" mr-1" src="../assets/icon/like.svg">
+        <button class="flex flex-row gap-1 items-center border border-slate-300 rounded-2xl px-3 py-1 mb-4">
+          <img src="../assets/icon/like.svg">
           <p>Todas</p>
         </button>
-        <button class="flex flex-row items-center border border-slate-300 rounded-2xl px-3 py-1 mb-4">
-          <img class=" mr-1" src="../assets/icon/like.svg">
+        <button class="flex flex-row gap-1 items-center border border-slate-300 rounded-2xl px-3 py-1 mb-4">
+          <img src="../assets/icon/like.svg">
           <p>Favoritas</p>
         </button> 
-        <button class="flex flex-row items-center border border-slate-300 rounded-2xl px-3 py-1 mb-4">
-          <img class=" mr-1" src="../assets/icon/like.svg">
+        <button class="flex flex-row gap-1 items-center border border-slate-300 rounded-2xl px-3 py-1 mb-4">
+          <img  src="../assets/icon/like.svg">
           <p>Telefonía</p>
         </button>
       </div>
-      <div>
         <div class="flex items-center justify-between p-4 border-b" v-for="item in providers" :key="item._id">
           <div class="flex items-center">
             <img class="icon-company mr-4" :src="item.image">
             <p>{{item.company}}</p>
           </div>
-          <img class="mr-1" src="../assets/icon/favorite.svg">
+          <img src="../assets/icon/favorite.svg">
         </div>
       </div>
-    </div>
+    
 </template>
 <style scoped>
     .icon-company{

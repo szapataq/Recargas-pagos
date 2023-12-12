@@ -44,7 +44,6 @@ export default{
       
         <hr class="my-6">
         
-        <div>
             <router-link  to="/recargas" custom v-slot="{ navigate }">
                 <div role="link" @click="navigate" class="flex flex-row items-center  mb-4 rounded-md bg-slate-100 p-4 cursor-pointer">
                     <div class="card-items rounded-md p-2 mr-3">
@@ -66,8 +65,6 @@ export default{
                 <p class="font-medium mr-2 text-xl">Historial de ganacias </p>
             </div> 
         </div>
-
-    </div>
 </template>
 
 <style scoped>
