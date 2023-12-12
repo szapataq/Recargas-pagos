@@ -5,7 +5,7 @@ export default{
     data(){
         return{
             balance:null,
-            url:'http://bun-burn-env.eba-ftyx2m3h.us-east-1.elasticbeanstalk.com',
+            url:'https://aspexpressapi-production.up.railway.app',
         }
     },
 
